@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <!--estructura basica de un form-->
+     <!--necesitamos los campos, el mas utilizado es input
+    todos deben tener el atributo name, es la forma en que el servidor sabe que campo es, 
+    es entonces obligatorio-->
+     <h1>Formulario</h1>
+    <form action="form.html"><!--action indica a donde se va a enviar el form, es tema de backend pero es importante saberlo-->
+        <fieldset>
+            <legend>Tus datos personales</legend>
+        <div>
+            <label>Tu nombre
+                <input name="username" value="username">
+            </label>         
+    
+        </div><br>
+        <div>
+            <label for="email">Tu correo</label>
+            <input id="email" name="email" required>
+        </div><br>
+    </fieldset>
+        <fieldset>
+            <legend>Comentarios</legend>
+            <div>
+                <label for="message">Deja un mensaje</label><br>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div><br>
+        </fieldset>
+        <fieldset>
+            <legend>Tipos de input</legend>
+            <div>
+                <label>Number
+                    <input type="number">
+                </label>
+                </div><br>
+                <div>
+                    <label>Date
+                        <input type="date">
+                    </label>
+            </div><br>
+            <div>
+                <label>Email
+                    <input type="email">
+                </label>
+        </div><br>
+        <div>
+            <label>Password
+                <input type="password">
+            </label>
+    </div><br>
+        <div>
+            <label>Tel
+                <input type="tel">
+            </label>
+    </div><br>
+    <div>
+        <label>Color
+            <input type="color">
+        </label>
+</div><br>
+<div>
+    <label>Range 
+        <input type="range" min="0" max="10" step="2" value="0">
+    </label>
+</div><br>
+        </fieldset>
+        <fieldset>
+            <legend>Tus preferencias</legend>
+            <div>
+                <label>
+                <input type="checkbox" name="preferencias" value="cine">
+                Cine
+            </label>
+            </div><br>
+            <div>
+                <label>
+                <input type="checkbox" name="preferencias" value="musica">
+                Música
+            </label>
+            </div><br>
+            <div>
+                <label>
+                <input type="checkbox" name="preferencias" value="viajes">
+                Viajes
+            </label>
+            </div><br>
+        </fieldset>
+        <fieldset>
+            <legend>Genero Radio button</legend>
+            <div>
+                <label>
+                    <input type="radio" name="gender">
+                    Hombre
+                </label>
+            </div><br>
+            <div>
+                <label>
+                    <input type="radio" name="gender">
+                    Mujer
+                </label>
+            </div><br>
+            <div>
+                <label>
+                    <input type="radio" name="gender" checked="on">
+                    N/A
+                </label>
+            </div><br>
+        </fieldset>
+        <fieldset>
+            <legend>Selecciona tu pais</legend>
+            <select name="name
+            country" id="">
+            <optgroup label="Sudamérica">
+                <option value="ar">Argentina</option>
+                <option value="uy">Uruguay</option>
+                <option value="co">Colombia</option>
+            </optgroup>
+           
+        </select>
+        </fieldset>
+        <fieldset>
+            <input type="list" list="country-list">
+        <datalist id="country-list">
+            <option value="Argentina"></option>
+            <option value="Colombia"></option>
+            <option value="Uruguay"></option>
+            <option value="Brasil"></option>
+        </datalist>
+        
+        </fieldset>
+
+    
+        <!--button>Enviar/Borrar</button-->
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+    <!--atributos dentro de los form
+    placeholder_indica un texto dentro de un input
+    type_tipo de input usamos
+    required_no necesita un valor, con incluirlo es obligatorio
+    readonly_no permite cambiar por usuario
+    autocomplete="on _ off" atributo del form
+    checked_es para checkbox y radio button son valores mostrados por defecto
+    select_aparece una opcion por default
+    -->
+    
+</body>
+</html>
